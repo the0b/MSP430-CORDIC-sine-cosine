@@ -8,5 +8,14 @@ Complement CORDIC Arithmetic on MSP430 presentation by Titi Trandafir of
 Microtrend Systems which contained an assembly language program utilizing 
 CORDIC. I also referenced the CORDIC wikipedia page.
 
-The internals of the function utilizes the following decimal angle representation:
-(decimal angle) = (2^16 * (integer angle in degrees)) / 180
+The function internally utilizes the following decimal angle representation:
+(decimal angle) = 2^16 * (integer angle in degrees) / 180
+
+I tested the function using 14 iterations and achieve accuracy to 3-4 decimal
+places. On an 8MHz chip, the algorithm took 256us to calculate sine/cosine for
+angles in the range greater than -180 to 180 degrees. If you constrain the input
+angles to -45 to 45 degrees and remove all the logic for greater angles, the 
+CORDIC iterations are finished in 178us.
+
+The file "MSP430 CORDIC Accuracy.xlsx" is a dump of the results of the algorithm
+for angles in the range of -90 to 90. 
