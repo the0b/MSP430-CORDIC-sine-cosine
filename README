@@ -1,0 +1,9 @@
+This project contains a function to caluculate sine and cosine using CORDIC 
+rotation on a 16 bit MSP430. The function takes any angle in degrees and 
+outputs the answers in Q.15 fixed point format.
+(floating point) = (fixed point)/ 2^15
+
+In creating this file, I referenced the 2004 presentation of Fixed Point Two's 
+Complement CORDIC Arithmetic on MSP430 presentation by Titi Trandafir of 
+Microtrend Systems which contained an assembly language program utilizing 
+CORDIC. I also referenced the CORDIC wikipedia page.
