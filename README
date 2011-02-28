@@ -11,7 +11,7 @@ CORDIC. I also referenced the CORDIC wikipedia page.
 The function internally utilizes the following decimal angle representation:
 (decimal angle) = 2^16 * (integer angle in degrees) / 180
 
-I tested the function using 14 iterations and achieve accuracy to 3-4 decimal
+I tested the function using 14 iterations and achieved accuracy to 3-4 decimal
 places. On an 8MHz chip, the algorithm took 256us to calculate sine/cosine for
 angles in the range greater than -180 to 180 degrees. If you constrain the input
 angles to -45 to 45 degrees and remove all the logic for greater angles, the 
