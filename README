@@ -7,3 +7,6 @@ In creating this file, I referenced the 2004 presentation of Fixed Point Two's
 Complement CORDIC Arithmetic on MSP430 presentation by Titi Trandafir of 
 Microtrend Systems which contained an assembly language program utilizing 
 CORDIC. I also referenced the CORDIC wikipedia page.
+
+The internals of the function utilizes the following decimal angle representation:
+(decimal angle) = (2^16 * (integer angle in degrees)) / 180

@@ -100,7 +100,7 @@ void cordic_sincos(int theta,
   s = 0;          //s will contain the final angle
   sigma = 1;      //direction from target angle
   
-  for (i=0; i<=iterations; i++){
+  for (i=0; i<iterations; i++){
     sigma = (theta - s) > 0 ? 1 : -1;
     if(sigma < 0){
       x2 = x1 + (y >> i);
