@@ -11,8 +11,8 @@
 //                assembly language program utilizing CORDIC. I also referenced
 //                the CORDIC wikipedia page.
 //
-//   T. Brower
-//   Version    1.00
+//   Theo Brower
+//   Version    1.01
 //   Feb 2011
 //     IAR Embedded Workbench Kickstart (Version: 5.20.1)
 //
@@ -76,8 +76,8 @@ void cordic_sincos(int theta,
   iterations = (iterations > ATAN_TAB_N) ? ATAN_TAB_N : iterations;
 
   //Shift angle to be in range -180 to 180
-  while(theta < -180) theta += 180;
-  while(theta > 180) theta -= 180;
+  while(theta < -180) theta += 360;
+  while(theta > 180) theta -= 360;
   
   //Shift angle to be in range -90 to 90
   if (theta < -90){
